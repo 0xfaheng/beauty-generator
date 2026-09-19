@@ -14,7 +14,7 @@
   QWEN_API_KEY       - DashScope key（Qwen-VL）
   QWEN_VL_MODEL      - 默认 qwen-vl-plus
   DEEPSEEK_API_KEY   - DeepSeek key
-  DEEPSEEK_MODEL     - 默认 deepseek-chat
+  DEEPSEEK_MODEL     - 默认 deepseek-flash
   BEAUTY_CAPTION_TONE - cinematic | diary
 """
 
@@ -34,7 +34,7 @@ from pathlib import Path
 QWEN_API_KEY = os.environ.get("QWEN_API_KEY", "")
 QWEN_VL_MODEL = os.environ.get("QWEN_VL_MODEL", "qwen-vl-plus")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-DEEPSEEK_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+DEEPSEEK_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-flash")
 
 QWEN_ENDPOINT = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
 DEEPSEEK_ENDPOINT = "https://api.deepseek.com/v1/chat/completions"

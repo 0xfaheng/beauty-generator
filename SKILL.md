@@ -6,6 +6,20 @@ author: rulanlai
 tags: [image-generation, beauty, wechat, google, doubao, seedream]
 ---
 
+> **DeepSeek 为何保留（2026-09-19 全局审校通道切换时的决定）**
+>
+> 本流程的设计执行环境是 **GitHub Actions 云端**（当前该 workflow 在 GitHub 上为
+> `disabled_manually`，已停跑；下述约束在重新启用时生效），而现行 Gemini 通道走的是**本机** AntiGravity 网关
+> `http://127.0.0.1:8045` —— 云端 runner 访问不到，所以本流程**不能**跟着换 Gemini。
+> 本机上有的只是 AntiGravity 网关 key（`sk-` 开头），不是 Google AI Studio 的官方 API key，
+> 拿不到云端可达的 Gemini。
+>
+> 因此这里**有意继续使用 DeepSeek**，不是漏改。同时已做一项加固：模型名从
+> `deepseek-v4-flash` 改为上游正名 `deepseek-flash`（旧名现在只是别名，回显已变为
+> `deepseek-flash`，别名随时可能被移除）。
+>
+> 若将来要换供应商，云端已配置的可选项是 `QWEN_API_KEY` 与 `DOUBAO_API_KEY`；但那会改变
+> 产出文风，需单独决定。或者申请 Google AI Studio 官方 key 后改为官方直连 Gemini。
 # Beauty Generator - 文生图写真 V12.45.1
 
 纯文生图模式：Google Imagen 4 Ultra（主力）+ 豆包 Seedream 4.5（兜底）。自动模式固定为性感系/相近吸引力写真，从元素库随机组合人物、场景、穿搭、光线和艺术风格，生成高质量年轻成熟女性艺术写真，并可直接发布到微信公众号草稿箱。
