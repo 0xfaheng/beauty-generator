@@ -1,3 +1,12 @@
+<!-- 0xfaheng-brand:start -->
+**0xfaheng · beauty-generator**
+
+[品牌主页与全部公开项目](https://github.com/lairulan) · [当前仓库](https://github.com/lairulan/beauty-generator)
+
+<!-- 0xfaheng-brand:end -->
+
+---
+
 # Beauty Generator V12.45
 
 > 双引擎艺术写真生成 + 性感/吸引力写真固定风格 + 公众号自动发布
